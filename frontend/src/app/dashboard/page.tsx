@@ -388,7 +388,7 @@ function DashboardContent() {
                 return (
                   <div
                     key={item.id}
-                    className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                    className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4 card-hover-glow"
                   >
                     <div className="flex items-center gap-4 min-w-0">
                       <img src={img} alt="" className="w-20 h-20 object-cover rounded-xl shrink-0" />
@@ -497,7 +497,7 @@ function DashboardContent() {
               return (
                 <div
                   key={enq.id}
-                  className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs space-y-4"
+                  className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-4"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-gray-100">
                     <div className="flex items-center gap-2">
@@ -586,7 +586,7 @@ function DashboardContent() {
               return (
                 <div
                   key={tx.id}
-                  className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs space-y-4"
+                  className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-4"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-gray-100">
                     <div className="flex items-center gap-2">
@@ -735,7 +735,7 @@ function DashboardContent() {
 
       {/* Tab 5: Account Profile Settings */}
       {activeTab === 'profile' && (
-        <form onSubmit={handleSaveProfile} className="bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-xs max-w-2xl space-y-6">
+        <form onSubmit={handleSaveProfile} className="bg-white/85 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl shadow-indigo-50/50 max-w-2xl space-y-6">
           <h2 className="text-lg font-bold text-gray-950">Update Student Information</h2>
 
           {profileSuccessMsg && (

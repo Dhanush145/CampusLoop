@@ -265,7 +265,7 @@ function ProductDetailContent({ params }: PageProps) {
           </h1>
 
           {/* Price Box */}
-          <div className="bg-gray-50/80 p-5 rounded-2xl border border-gray-200/80 flex items-baseline justify-between">
+          <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs flex items-baseline justify-between">
             <div>
               <div className="flex items-baseline gap-2.5">
                 <span className="text-3xl font-extrabold text-gray-950">
@@ -353,7 +353,7 @@ function ProductDetailContent({ params }: PageProps) {
           </div>
 
           {/* Seller Card */}
-          <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs space-y-3">
+          <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
             <h4 className="text-xs font-bold text-gray-500 uppercase tracking-wider">
               Seller Information
             </h4>

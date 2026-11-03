@@ -196,7 +196,7 @@ function MarketplaceContent() {
       {/* Main Grid: Sidebar Filters + Products */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 pt-8">
         {/* Desktop Sidebar Filters */}
-        <aside className="hidden lg:block lg:col-span-1 space-y-6">
+        <aside className="hidden lg:block lg:col-span-1 space-y-6 bg-white/75 backdrop-blur-md p-6 rounded-2xl border border-slate-200/80 shadow-xs h-fit sticky top-24">
           <div className="flex items-center justify-between">
             <h2 className="text-base font-bold text-gray-900 flex items-center gap-2">
               <SlidersHorizontal className="w-4 h-4 text-indigo-600" /> Filters
@@ -335,7 +335,7 @@ function MarketplaceContent() {
         {/* Product Grid Area */}
         <div className="lg:col-span-3 space-y-6">
           {/* Top bar: results count & sorting */}
-          <div className="flex flex-wrap items-center justify-between gap-4 bg-gray-50/60 p-3 rounded-xl border border-gray-100">
+          <div className="flex flex-wrap items-center justify-between gap-4 bg-white/75 backdrop-blur-md p-4 rounded-2xl border border-slate-200/80 shadow-xs">
             <p className="text-sm text-gray-600">
               Showing <span className="font-bold text-gray-900">{products.length}</span> of{' '}
               <span className="font-bold text-gray-900">{totalCount}</span> items

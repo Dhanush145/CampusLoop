@@ -65,7 +65,7 @@ export default function ProductCard({ product, onWishlistToggle }: ProductCardPr
     'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80';
 
   return (
-    <div className="group relative bg-white rounded-2xl border border-gray-100 hover:border-gray-300 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden">
+    <div className="group relative bg-white/95 backdrop-blur-xs rounded-2xl border border-slate-200/80 hover:border-indigo-400/80 shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col overflow-hidden">
       {/* Image Container */}
       <Link href={`/products/${product.id}`} className="relative block aspect-[4/3] overflow-hidden bg-gray-100">
         <img

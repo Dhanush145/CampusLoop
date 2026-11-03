@@ -188,7 +188,7 @@ export default function SellPage() {
       )}
 
       {!previewTab ? (
-        <form onSubmit={handleSubmit} className="space-y-8 bg-white p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-xs">
+        <form onSubmit={handleSubmit} className="space-y-8 bg-white/85 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl shadow-indigo-50/50">
           {/* Title */}
           <div>
             <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-2">

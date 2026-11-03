@@ -189,7 +189,7 @@ export default function AdminPage() {
         <div className="space-y-8">
           {/* Key Metrics Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+            <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                 Total Students
               </p>
@@ -201,7 +201,7 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+            <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                 Active Listings
               </p>
@@ -213,7 +213,7 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+            <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                 Exchanges Completed
               </p>
@@ -225,7 +225,7 @@ export default function AdminPage() {
               </p>
             </div>
 
-            <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs">
+            <div className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs">
               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">
                 Pending Reports
               </p>
@@ -239,7 +239,7 @@ export default function AdminPage() {
           </div>
 
           {/* Category Distribution */}
-          <div className="bg-white p-6 rounded-3xl border border-gray-200 shadow-xs space-y-4">
+          <div className="bg-white/80 backdrop-blur-md p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-4">
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">
               Listings Distribution by Category
             </h3>
@@ -259,7 +259,7 @@ export default function AdminPage() {
 
       {/* Tab: Users */}
       {activeTab === 'users' && (
-        <div className="bg-white rounded-3xl border border-gray-200 shadow-xs overflow-hidden">
+        <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">
           <div className="p-4 border-b border-gray-200 flex items-center justify-between">
             <h3 className="text-sm font-bold text-gray-900">Student Profiles & Security</h3>
             <input
@@ -336,7 +336,7 @@ export default function AdminPage() {
 
       {/* Tab: Products Moderation */}
       {activeTab === 'products' && (
-        <div className="bg-white rounded-3xl border border-gray-200 shadow-xs overflow-hidden">
+        <div className="bg-white/80 backdrop-blur-md rounded-3xl border border-slate-200/80 shadow-xs overflow-hidden">
           <div className="p-4 border-b border-gray-200">
             <h3 className="text-sm font-bold text-gray-900">Listings Moderation Queue</h3>
           </div>
@@ -389,7 +389,7 @@ export default function AdminPage() {
         <div className="space-y-4">
           {reportsList.length > 0 ? (
             reportsList.map((r) => (
-              <div key={r.id} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-xs space-y-3">
+              <div key={r.id} className="bg-white/80 backdrop-blur-md p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-wider text-rose-600 bg-rose-50 px-2.5 py-0.5 rounded-md">
                     Reason: {r.reason_display || r.reason}

@@ -71,7 +71,7 @@ function LoginContent() {
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md px-4 sm:px-0 space-y-6">
         {/* Quick Demo Login Bar for Evaluators */}
-        <div className="bg-indigo-50/80 border border-indigo-200/80 rounded-2xl p-4 space-y-3">
+        <div className="bg-indigo-50/90 backdrop-blur-md border border-indigo-200/90 rounded-2xl p-5 space-y-3 shadow-xs">
           <div className="flex items-center gap-2 text-indigo-900 font-bold text-xs uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
             1-Click Demonstration Accounts
@@ -83,7 +83,7 @@ function LoginContent() {
             <button
               type="button"
               onClick={() => handleLogin(undefined, 'student_a@iitb.ac.in', 'student123')}
-              className="bg-white hover:bg-indigo-100/60 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-left truncate flex items-center gap-1.5"
+              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
             >
               <UserCheck className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
               <span>Student A (IITB)</span>
@@ -91,7 +91,7 @@ function LoginContent() {
             <button
               type="button"
               onClick={() => handleLogin(undefined, 'student_b@bits.ac.in', 'student123')}
-              className="bg-white hover:bg-indigo-100/60 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-left truncate flex items-center gap-1.5"
+              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
             >
               <UserCheck className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
               <span>Student B (BITS)</span>
@@ -100,7 +100,7 @@ function LoginContent() {
           <button
             type="button"
             onClick={() => handleLogin(undefined, 'admin@campusloop.in', 'admin123')}
-            className="w-full bg-white hover:bg-indigo-100/60 border border-indigo-200 text-amber-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-center flex items-center justify-center gap-1.5"
+            className="w-full bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-amber-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-center flex items-center justify-center gap-1.5 shadow-2xs"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-amber-600 shrink-0" />
             <span>Admin Console (admin@campusloop.in)</span>
@@ -108,7 +108,7 @@ function LoginContent() {
         </div>
 
         {/* Standard Login Form */}
-        <div className="bg-white p-8 rounded-3xl border border-gray-200 shadow-xs space-y-6">
+        <div className="bg-white/85 backdrop-blur-md p-8 rounded-3xl border border-slate-200/90 shadow-xl shadow-indigo-50/50 space-y-6">
           {errorMsg && (
             <div className="p-3 bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold rounded-xl">
               {errorMsg}

@@ -27,9 +27,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-gray-900 font-sans selection:bg-indigo-500 selection:text-white">
+      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 font-sans selection:bg-indigo-500 selection:text-white relative">
+        {/* Subtle Ambient Background Gradients & Grid Pattern */}
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+          {/* Top Center Indigo Glow */}
+          <div className="radial-glow-top" />
+          {/* Accent Right Blue Glow */}
+          <div className="radial-glow-accent" />
+          {/* Bottom Left Subtle Emerald/Indigo Glow */}
+          <div className="radial-glow-bottom-left" />
+          {/* Subtle Grid Dot Matrix */}
+          <div className="absolute inset-0 bg-grid-pattern opacity-40 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+        </div>
+
+        {/* Header Navigation */}
         <Navbar />
-        <main className="flex-1">{children}</main>
+
+        {/* Main Content Area */}
+        <main className="flex-1 relative z-10">{children}</main>
+
+        {/* Footer */}
         <Footer />
       </body>
     </html>

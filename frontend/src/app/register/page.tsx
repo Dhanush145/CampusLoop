@@ -115,7 +115,7 @@ export default function RegisterPage() {
           </p>
         </div>
 
-        <div className="bg-white p-8 rounded-3xl border border-gray-200 shadow-xs space-y-6">
+        <div className="bg-white/85 backdrop-blur-md p-8 rounded-3xl border border-slate-200/90 shadow-xl shadow-indigo-50/50 space-y-6">
           {errorMsg && (
             <div className="p-3 bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold rounded-xl">
               {errorMsg}

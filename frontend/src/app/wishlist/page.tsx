@@ -100,7 +100,7 @@ export default function WishlistPage() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 bg-gray-50 rounded-3xl border border-dashed border-gray-200 max-w-lg mx-auto space-y-4">
+        <div className="text-center py-20 bg-white/75 backdrop-blur-md rounded-3xl border border-dashed border-slate-300 max-w-lg mx-auto space-y-4 shadow-xs">
           <div className="w-16 h-16 bg-white rounded-2xl shadow-xs border border-gray-100 flex items-center justify-center mx-auto text-gray-400">
             <ShoppingBag className="w-8 h-8" />
           </div>
