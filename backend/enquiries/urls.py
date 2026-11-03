@@ -12,3 +12,4 @@ router.register(r'', EnquiryViewSet, basename='enquiries')
 urlpatterns = [
     path('', include(router.urls)),
 ]
+

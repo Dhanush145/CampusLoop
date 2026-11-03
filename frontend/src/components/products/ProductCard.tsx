@@ -160,3 +160,4 @@ export default function ProductCard({ product, onWishlistToggle }: ProductCardPr
     </div>
   );
 }
+

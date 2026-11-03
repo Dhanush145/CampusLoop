@@ -12,6 +12,7 @@ from .models import Enquiry
 from .serializers import EnquirySerializer, EnquiryCreateSerializer
 from notifications.models import Notification
 from messaging.models import Conversation, Message
+from transactions.models import Transaction
 
 
 class EnquiryViewSet(viewsets.ModelViewSet):
@@ -78,6 +79,19 @@ class EnquiryViewSet(viewsets.ModelViewSet):
         
         enquiry.status = 'accepted'
         enquiry.save()
+
+        # Automatically create or link coordination Transaction record
+        Transaction.objects.get_or_create(
+            enquiry=enquiry,
+            product=enquiry.product,
+            buyer=enquiry.buyer,
+            seller=enquiry.seller,
+            defaults={
+                'status': 'accepted',
+                'price': enquiry.product.price,
+                'notes': f'Created from accepted enquiry: "{enquiry.message[:80]}"',
+            }
+        )
 
         Notification.objects.create(
             user=enquiry.buyer,

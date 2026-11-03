@@ -10,3 +10,4 @@ urlpatterns = [
     path('toggle/', WishlistToggleView.as_view(), name='wishlist_toggle'),
     path('<int:pk>/', WishlistRemoveItemView.as_view(), name='wishlist_remove'),
 ]
+

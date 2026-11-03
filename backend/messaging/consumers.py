@@ -75,3 +75,4 @@ class ChatConsumer(AsyncWebsocketConsumer):
             'is_read': msg.is_read,
             'created_at': msg.created_at.isoformat()
         }
+

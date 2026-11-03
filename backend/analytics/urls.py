@@ -18,3 +18,4 @@ urlpatterns = [
     path('dashboard/', AdminDashboardStatsView.as_view(), name='admin_dashboard_stats'),
     path('', include(router.urls)),
 ]
+

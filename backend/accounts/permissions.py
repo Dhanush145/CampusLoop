@@ -47,3 +47,4 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
             return True
         owner = getattr(obj, 'seller', getattr(obj, 'user', getattr(obj, 'buyer', None)))
         return owner == request.user or request.user.is_admin or request.user.is_staff
+

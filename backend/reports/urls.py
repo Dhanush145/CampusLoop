@@ -13,3 +13,4 @@ urlpatterns = [
     path('reports/', ReportCreateView.as_view(), name='report_create'),
     path('', include(router.urls)),
 ]
+

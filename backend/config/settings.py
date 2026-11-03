@@ -160,10 +160,13 @@ SIMPLE_JWT = {
 }
 
 # CORS
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    'CORS_ALLOWED_ORIGINS',
-    'http://localhost:3000,http://127.0.0.1:3000'
-).split(',')
+CORS_ALLOW_ALL_ORIGINS = DEBUG
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'http://localhost:3001',
+    'http://127.0.0.1:3001',
+]
 CORS_ALLOW_CREDENTIALS = True
 
 # Cloudinary

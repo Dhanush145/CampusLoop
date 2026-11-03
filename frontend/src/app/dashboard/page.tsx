@@ -131,7 +131,8 @@ function DashboardContent() {
   const handleAcceptEnquiry = async (enquiryId: number) => {
     try {
       await api.post(`/enquiries/${enquiryId}/accept/`);
-      loadDashboardData();
+      await loadDashboardData();
+      setActiveTab('transactions');
     } catch (e) {
       console.error(e);
     }

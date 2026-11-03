@@ -272,3 +272,4 @@ The application has been verified to support the complete 15-step demonstration 
 13. **Step 13:** Switch to the **Transactions** tab and click **Mark as Reserved** (the item availability updates automatically).
 14. **Step 14:** Meet on campus and click **Confirm Handoff Completed** (the product is marked as Sold Out).
 15. **Step 15:** Refresh the browser — all states, listings, transactions, and status updates persist cleanly in the database.
+
