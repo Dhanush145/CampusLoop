@@ -71,3 +71,10 @@ coverage.xml
 *.tmp
 *.temp
 
+# Reports
+*PROJECT_REPORT*
+CAMPUSLOOP_UNIVERSITY_PROJECT_REPORT*
+*.pdf
+*temp.html
+generate_pdf.py
+
