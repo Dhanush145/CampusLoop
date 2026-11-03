@@ -100,6 +100,10 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-indigo-400" />
+                <span>IIIT Dharwad (Karnataka)</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-indigo-400" />
                 <span>IIT Bombay (Powai, Mumbai)</span>
               </div>
               <div className="flex items-center gap-2">

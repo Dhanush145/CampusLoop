@@ -343,22 +343,22 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs flex flex-col justify-between">
+          <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col justify-between card-hover-glow">
             <p className="text-sm text-gray-700 italic leading-relaxed">
-              &quot;I sold my 2nd-year Engineering Mathematics and Algorithm books in less than 3 hours to a junior in Hostel 12. No spam, no random WhatsApp messages.&quot;
+              &quot;Sold my Raspberry Pi starter kit and Machine Learning textbooks in less than an hour to a junior in the academic block. CampusLoop made handoff instant.&quot;
             </p>
             <div className="mt-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-indigo-100 text-indigo-700 font-bold flex items-center justify-center text-sm">
-                AM
+                KR
               </div>
               <div>
-                <p className="text-sm font-bold text-gray-900">Aarav Mehta</p>
-                <p className="text-xs text-gray-500">CS 3rd Year, IIT Bombay</p>
+                <p className="text-sm font-bold text-gray-900">Kiran Rao</p>
+                <p className="text-xs text-gray-500">DS & AI 3rd Year, IIIT Dharwad</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs flex flex-col justify-between">
+          <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col justify-between card-hover-glow">
             <p className="text-sm text-gray-700 italic leading-relaxed">
               &quot;Saved over ₹4,000 on my Casio ClassWiz scientific calculator and mini-drafter before first semester exams. CampusLoop made the handoff so effortless.&quot;
             </p>
@@ -373,17 +373,17 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-xs flex flex-col justify-between">
+          <div className="bg-white/80 backdrop-blur-md p-6 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col justify-between card-hover-glow">
             <p className="text-sm text-gray-700 italic leading-relaxed">
               &quot;Got a sturdy campus cycle for just ₹2,500 from a graduating senior. Verified college profiles give 100% peace of mind against frauds.&quot;
             </p>
             <div className="mt-6 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold flex items-center justify-center text-sm">
-                RV
+                AM
               </div>
               <div>
-                <p className="text-sm font-bold text-gray-900">Rohan Verma</p>
-                <p className="text-xs text-gray-500">Civil 2nd Year, NIT Trichy</p>
+                <p className="text-sm font-bold text-gray-900">Aarav Mehta</p>
+                <p className="text-xs text-gray-500">CS 3rd Year, IIT Bombay</p>
               </div>
             </div>
           </div>

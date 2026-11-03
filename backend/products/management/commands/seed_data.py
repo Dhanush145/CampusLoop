@@ -50,6 +50,7 @@ class Command(BaseCommand):
 
         # 1. Colleges
         colleges_data = [
+            {'name': 'Indian Institute of Information Technology Dharwad', 'short_name': 'IIIT Dharwad', 'domain': 'iiitdwd.ac.in', 'city': 'Dharwad', 'state': 'Karnataka'},
             {'name': 'Indian Institute of Technology Bombay', 'short_name': 'IIT Bombay', 'domain': 'iitb.ac.in', 'city': 'Mumbai', 'state': 'Maharashtra'},
             {'name': 'BITS Pilani - Pilani Campus', 'short_name': 'BITS Pilani', 'domain': 'pilani.bits-pilani.ac.in', 'city': 'Pilani', 'state': 'Rajasthan'},
             {'name': 'National Institute of Technology Trichy', 'short_name': 'NIT Trichy', 'domain': 'nitt.edu', 'city': 'Tiruchirappalli', 'state': 'Tamil Nadu'},
@@ -110,6 +111,7 @@ class Command(BaseCommand):
             {'username': 'rohan_v', 'email': 'rohan.v@nitt.edu', 'name': 'Rohan Verma', 'college': 'NIT Trichy', 'dept': 'Civil Engineering', 'year': 2, 'roll': '103123045', 'phone': '9876543213'},
             {'username': 'ananya_i', 'email': 'ananya.i@dtu.ac.in', 'name': 'Ananya Iyer', 'college': 'DTU Delhi', 'dept': 'Information Technology', 'year': 3, 'roll': '2K22/IT/034', 'phone': '9876543214'},
             {'username': 'vikram_s', 'email': 'vikram.s@bits.ac.in', 'name': 'Vikram Singh', 'college': 'BITS Pilani', 'dept': 'Mechanical Engineering', 'year': 3, 'roll': '2022A4PS089P', 'phone': '9876543215'},
+            {'username': 'kiran_iiitdwd', 'email': 'kiran@iiitdwd.ac.in', 'name': 'Kiran Rao', 'college': 'IIIT Dharwad', 'dept': 'Data Science & AI', 'year': 3, 'roll': '23BCS045', 'phone': '9876543216'},
         ]
 
         students = {}
@@ -304,6 +306,20 @@ class Command(BaseCommand):
                 'description': 'Warm tone, low action, easy to play chords. Perfect for hostel jam sessions. Strung with D’Addario strings.',
                 'image': 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80',
             },
+            {
+                'seller': 'kiran_iiitdwd', 'category': 'electronics', 'college': 'IIIT Dharwad',
+                'title': 'Raspberry Pi 4 Model B (4GB) + Starter Sensor Kit',
+                'price': Decimal('3800.00'), 'original_price': Decimal('6500.00'), 'condition': 'like_new',
+                'description': 'Original Raspberry Pi 4 (4GB RAM) with official power adapter, 32GB SanDisk Class 10 MicroSD card, acrylic case with cooling fan, and sensor kit for IoT projects.',
+                'image': 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+            },
+            {
+                'seller': 'kiran_iiitdwd', 'category': 'textbooks', 'college': 'IIIT Dharwad',
+                'title': 'Pattern Recognition and Machine Learning (Christopher Bishop)',
+                'price': Decimal('550.00'), 'original_price': Decimal('1200.00'), 'condition': 'good',
+                'description': 'The definitive textbook for Machine Learning and Deep Learning coursework. Binding intact, clean pages with minor pencil annotations.',
+                'image': 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80',
+            },
         ]
 
         created_products = []
@@ -394,8 +410,9 @@ class Command(BaseCommand):
             'CAMPUSLOOP DATABASE SEEDED SUCCESSFULLY!\n'
             '=======================================================\n'
             'Sample Accounts Ready for Demonstration:\n'
-            '1. Student A: student_a@iitb.ac.in | password: student123\n'
-            '2. Student B: student_b@bits.ac.in  | password: student123\n'
-            '3. Admin:     admin@campusloop.in  | password: admin123\n'
+            '1. Student A:    student_a@iitb.ac.in   | password: student123 (IIT Bombay)\n'
+            '2. Student B:    student_b@bits.ac.in   | password: student123 (BITS Pilani)\n'
+            '3. Student C:    kiran@iiitdwd.ac.in    | password: student123 (IIIT Dharwad)\n'
+            '4. Admin:        admin@campusloop.in    | password: admin123\n'
             '=======================================================\n'
         ))

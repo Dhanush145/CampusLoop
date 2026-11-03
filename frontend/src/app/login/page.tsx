@@ -79,22 +79,30 @@ function LoginContent() {
           <p className="text-xs text-indigo-700">
             Click below to instantly log in for project evaluation & live testing:
           </p>
-          <div className="grid grid-cols-2 gap-2 pt-1">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1">
             <button
               type="button"
               onClick={() => handleLogin(undefined, 'student_a@iitb.ac.in', 'student123')}
-              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
+              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-2.5 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
             >
               <UserCheck className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
-              <span>Student A (IITB)</span>
+              <span>Aarav (IITB)</span>
             </button>
             <button
               type="button"
               onClick={() => handleLogin(undefined, 'student_b@bits.ac.in', 'student123')}
-              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-3 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
+              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-2.5 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
             >
               <UserCheck className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
-              <span>Student B (BITS)</span>
+              <span>Bhavya (BITS)</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => handleLogin(undefined, 'kiran@iiitdwd.ac.in', 'student123')}
+              className="bg-white/90 hover:bg-indigo-100/80 border border-indigo-200 text-indigo-900 font-bold text-xs py-2 px-2.5 rounded-xl transition-all text-left truncate flex items-center gap-1.5 shadow-2xs"
+            >
+              <UserCheck className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+              <span>Kiran (IIIT Dharwad)</span>
             </button>
           </div>
           <button

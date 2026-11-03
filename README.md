@@ -29,7 +29,7 @@ Currently, university students depend on informal, disorganized WhatsApp groups,
 - **Wishlist & Saved Searches:** Instant one-click wishlist toggling with database persistence.
 - **Seller Management:** Create multi-step listings with condition badges, image galleries, live preview cards, and availability controls.
 - **Admin Moderation Console:** Overview metrics, student verification/suspension, listing approval, and report resolution.
-- **Pre-Configured Demo Accounts:** One-click demo login buttons for **Student A (IIT Bombay)**, **Student B (BITS Pilani)**, and **Admin** for instant evaluation.
+- **Pre-Configured Demo Accounts:** One-click demo login buttons for **Student A (IIT Bombay)**, **Student B (BITS Pilani)**, **Kiran Rao (IIIT Dharwad)**, and **Admin** for instant evaluation.
 
 ---
 
@@ -222,7 +222,7 @@ erDiagram
    ```powershell
    python manage.py migrate
    ```
-3. Seed the database with realistic colleges, categories, student accounts, and 22+ campus products:
+3. Seed the database with realistic colleges (including IIIT Dharwad, IIT Bombay, BITS Pilani, NIT Trichy, DTU), categories, student accounts, and 24+ campus products:
    ```powershell
    python manage.py seed_data --clear
    ```

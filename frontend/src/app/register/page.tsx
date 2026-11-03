@@ -148,11 +148,11 @@ export default function RegisterPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="rollnumber@iitb.ac.in"
+                placeholder="rollnumber@iiitdwd.ac.in"
                 className="w-full text-sm bg-gray-50 border border-gray-300 rounded-xl p-3 focus:outline-none focus:border-indigo-500 focus:bg-white"
               />
-              <p className="text-[11px] text-gray-400 mt-1">
-                Must match an approved campus domain (.ac.in, .edu).
+              <p className="text-[11px] text-gray-500 mt-1">
+                Must match an approved campus domain (e.g. @iiitdwd.ac.in, @iitb.ac.in).
               </p>
             </div>
 
