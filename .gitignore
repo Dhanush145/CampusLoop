@@ -9,13 +9,16 @@ __pycache__/
 dist/
 build/
 eggs/
-lib/
-lib64/
+/lib/
+/lib64/
 parts/
 sdist/
 var/
 wheels/
 *.whl
+
+!frontend/src/lib/
+!frontend/src/lib/**
 
 # Virtual environments
 venv/
