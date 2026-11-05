@@ -1,4 +1,4 @@
-# CampusLoop – Full Stack Campus Marketplace
+# CampusLoop – Full Stack Campus Marketplace.
 
 > **Tagline:** Buy. Sell. Exchange. Within Your Campus.  
 > **Category:** Full Stack Web Application (Next.js 14+ & Django REST Framework)
