@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Project Overview & Problem Statement
+## 1. Project Overview & Problem Statement.
 
 Currently, university students depend on informal, disorganized WhatsApp groups, Telegram channels, and personal word-of-mouth to buy and sell second-hand course textbooks, scientific calculators, laptops, cycles, and hostel gear. This results in:
 - High noise, repeated spam, and unsearchable chat histories.
@@ -16,7 +16,7 @@ Currently, university students depend on informal, disorganized WhatsApp groups,
 
 ---
 
-## 2. Key Features
+## 2. Key Features.
 
 - **Institutional Student Verification:** Email verification restricted to verified college domains (`.ac.in`, `.edu`) with 6-digit OTP verification.
 - **Product Discovery & Search:**
@@ -33,7 +33,7 @@ Currently, university students depend on informal, disorganized WhatsApp groups,
 
 ---
 
-## 3. Technology Stack
+## 3. Technology Stack.
 
 ### Frontend (70% emphasis)
 - **Framework:** Next.js 16 (App Router) with React 19 & TypeScript
@@ -51,7 +51,7 @@ Currently, university students depend on informal, disorganized WhatsApp groups,
 
 ---
 
-## 4. System Architecture
+## 4. System Architecture.
 
 ```mermaid
 graph TD
@@ -70,7 +70,7 @@ graph TD
 
 ---
 
-## 5. Database ER Diagram
+## 5. Database ER Diagram.
 
 ```mermaid
 erDiagram
@@ -139,7 +139,7 @@ erDiagram
 
 ---
 
-## 6. Folder Structure
+## 6. Folder Structure.
 
 ```
 1-fullstack/
@@ -182,7 +182,7 @@ erDiagram
 
 ---
 
-## 7. API Documentation
+## 7. API Documentation.
 
 | App | Method | Endpoint | Description |
 |---|---|---|---|
@@ -210,7 +210,7 @@ erDiagram
 
 ---
 
-## 8. Installation & Setup Instructions
+## 8. Installation & Setup Instructions.
 
 ### Backend Setup (Django)
 
@@ -253,7 +253,7 @@ erDiagram
 
 ---
 
-## 9. Mandatory Demonstration Workflow (15 Steps)
+## 9. Mandatory Demonstration Workflow (15 Steps).
 
 The application has been verified to support the complete 15-step demonstration required by university evaluation criteria:
 
