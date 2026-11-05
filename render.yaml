@@ -1,5 +1,5 @@
 services:
-  # Backend API Service (Django REST Framework)
+  # Backend API Service (Django REST Framework with SQLite)
   - type: web
     name: campusloop-api
     runtime: python
@@ -9,10 +9,6 @@ services:
     buildCommand: "./build.sh"
     startCommand: "gunicorn config.wsgi:application --bind 0.0.0.0:$PORT"
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: campusloop-db
-          property: connectionString
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
@@ -37,9 +33,4 @@ services:
       - key: NEXT_PUBLIC_API_URL
         value: https://campusloop-api.onrender.com/api
 
-databases:
-  - name: campusloop-db
-    databaseName: campusloop
-    user: campusloop_user
-    plan: free
-    region: oregon
+
