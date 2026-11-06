@@ -9,7 +9,7 @@
 | No. | Name | Roll Number | Primary Responsibility |
 |---|---|---|---|
 | 1 | Dhanush N | 24BDS018 | Project Lead, Frontend Architecture and Integration |
-| 2 | Kishan Kumar Y | 24BDS031 | Backend Development and Database Management |
+| 2 | Kishan Kumar Y | 24BDS031 | Register page and Product id page  |
 | 3 | Prajwal | 24BCS170 | Marketplace Frontend and Seller Workflows |
 | 4 | Yashas | 24BCS165 | Admin Dashboard, Testing and Documentation |
 
