@@ -25,7 +25,9 @@ class ProductListSerializer(serializers.ModelSerializer):
 
     seller_name = serializers.CharField(source='seller.full_name', read_only=True)
     category_name = serializers.CharField(source='category.name', read_only=True)
-    college_name = serializers.CharField(source='college.short_name', read_only=True)
+    category_slug = serializers.CharField(source='category.slug', read_only=True)
+    college_name = serializers.CharField(source='college.name', read_only=True)
+    college_short_name = serializers.CharField(source='college.short_name', read_only=True)
     primary_image_url = serializers.SerializerMethodField()
     condition_display = serializers.CharField(
         source='get_condition_display', read_only=True
@@ -37,9 +39,9 @@ class ProductListSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'title', 'slug', 'price', 'original_price',
             'condition', 'condition_display', 'is_available', 'is_sold',
-            'seller', 'seller_name', 'category', 'category_name',
-            'college', 'college_name', 'primary_image_url',
-            'view_count', 'is_wishlisted', 'created_at',
+            'seller', 'seller_name', 'category', 'category_name', 'category_slug',
+            'college', 'college_name', 'college_short_name', 'exchange_location',
+            'primary_image_url', 'view_count', 'is_wishlisted', 'created_at',
         ]
 
     def get_primary_image_url(self, obj):
@@ -79,7 +81,7 @@ class ProductDetailSerializer(serializers.ModelSerializer):
             'condition', 'condition_display', 'is_available', 'is_sold',
             'is_approved', 'view_count', 'seller', 'category', 'category_name',
             'category_slug', 'college', 'college_name', 'college_short_name',
-            'images', 'is_wishlisted', 'enquiry_count',
+            'exchange_location', 'images', 'is_wishlisted', 'enquiry_count',
             'created_at', 'updated_at',
         ]
 
@@ -106,7 +108,7 @@ class ProductCreateSerializer(serializers.ModelSerializer):
         model = Product
         fields = [
             'id', 'title', 'slug', 'description', 'price', 'original_price',
-            'category', 'condition', 'college', 'images', 'created_at',
+            'category', 'condition', 'college', 'exchange_location', 'images', 'created_at',
         ]
         read_only_fields = ['id', 'slug', 'created_at']
 

@@ -28,11 +28,17 @@ class ProductFilter(django_filters.FilterSet):
     category = django_filters.CharFilter(method='filter_category')
     college = django_filters.NumberFilter(field_name="college__id")
     condition = django_filters.CharFilter(field_name="condition")
+    exchange_location = django_filters.CharFilter(
+        field_name="exchange_location", lookup_expr='icontains'
+    )
     is_available = django_filters.BooleanFilter(field_name="is_available")
 
     class Meta:
         model = Product
-        fields = ['category', 'condition', 'college', 'min_price', 'max_price', 'is_available']
+        fields = [
+            'category', 'condition', 'college', 'exchange_location',
+            'min_price', 'max_price', 'is_available'
+        ]
 
     def filter_category(self, queryset, name, value):
         if value.isdigit():
@@ -47,7 +53,10 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.select_related('seller', 'category', 'college').prefetch_related('images').all()
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_class = ProductFilter
-    search_fields = ['title', 'description', 'category__name']
+    search_fields = [
+        'title', 'description', 'category__name', 'exchange_location',
+        'college__short_name', 'college__name'
+    ]
     ordering_fields = ['created_at', 'price', 'view_count']
     ordering = ['-created_at']
 

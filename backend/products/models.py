@@ -44,6 +44,12 @@ class Product(models.Model):
         null=True,
         related_name='products',
     )
+    exchange_location = models.CharField(
+        max_length=255,
+        blank=True,
+        default='',
+        help_text="Campus exchange spot, e.g. Central Library, Main Canteen, Hostel Block 3",
+    )
     is_available = models.BooleanField(default=True)
     is_sold = models.BooleanField(default=False)
     is_approved = models.BooleanField(default=True)
