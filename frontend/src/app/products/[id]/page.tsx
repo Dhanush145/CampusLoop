@@ -379,6 +379,24 @@ function ProductDetailContent({ params }: PageProps) {
             </p>
           </div>
 
+          {/* Campus Exchange Location Card */}
+          <div className="bg-emerald-50/70 border border-emerald-200/80 p-5 rounded-2xl shadow-xs space-y-2">
+            <h4 className="text-xs font-bold text-emerald-800 uppercase tracking-wider flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 text-emerald-600" /> Preferred Exchange Location
+            </h4>
+            <div>
+              <p className="text-base font-bold text-gray-950">
+                {product.exchange_location || 'Campus Handover (Central Library)'}
+              </p>
+              <p className="text-xs text-emerald-800 font-medium mt-0.5">
+                Campus: {product.college_name || product.college_short_name || 'Campus Meeting Spot'}
+              </p>
+            </div>
+            <p className="text-xs text-gray-600 pt-1 border-t border-emerald-100">
+              Campus exchanges happen in person at designated safe campus spots. Inspect item in person before completing exchange.
+            </p>
+          </div>
+
           {/* Description */}
           <div className="space-y-2">
             <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wider">

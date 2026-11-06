@@ -121,7 +121,7 @@ export default function ProductCard({ product, onWishlistToggle }: ProductCardPr
             </span>
             <span className="flex items-center gap-1 shrink-0 text-gray-500">
               <MapPin className="w-3 h-3 text-gray-400" />
-              {product.college_short_name || 'Campus'}
+              {product.college_short_name || product.college_name || 'Campus'}
             </span>
           </div>
 
@@ -131,6 +131,14 @@ export default function ProductCard({ product, onWishlistToggle }: ProductCardPr
               {product.title}
             </h3>
           </Link>
+
+          {/* Exchange Location pill */}
+          {product.exchange_location && (
+            <div className="flex items-center gap-1 text-[11px] text-emerald-700 bg-emerald-50/90 border border-emerald-100 px-2 py-0.5 rounded-md mt-1.5 w-fit max-w-full">
+              <MapPin className="w-3 h-3 text-emerald-600 shrink-0" />
+              <span className="truncate font-medium">{product.exchange_location}</span>
+            </div>
+          )}
         </div>
 
         {/* Price & Seller Info */}

@@ -79,6 +79,7 @@ export interface Product {
   college: number | College;
   college_name?: string;
   college_short_name?: string;
+  exchange_location?: string;
   primary_image_url?: string;
   images?: ProductImage[];
   is_wishlisted?: boolean;

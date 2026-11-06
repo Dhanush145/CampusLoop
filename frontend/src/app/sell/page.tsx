@@ -12,6 +12,7 @@ import {
   Sparkles,
   ArrowRight,
   ShieldCheck,
+  MapPin,
 } from 'lucide-react';
 import api from '@/lib/api';
 import { Category, College } from '@/lib/types';
@@ -32,6 +33,7 @@ export default function SellPage() {
   const [price, setPrice] = useState('');
   const [originalPrice, setOriginalPrice] = useState('');
   const [description, setDescription] = useState('');
+  const [exchangeLocation, setExchangeLocation] = useState('Central Library Ground Floor');
   const [imageUrl, setImageUrl] = useState('');
   const [collegeId, setCollegeId] = useState<string>('');
 
@@ -102,6 +104,7 @@ export default function SellPage() {
         category: parseInt(category, 10),
         condition,
         college: collegeId ? parseInt(collegeId, 10) : undefined,
+        exchange_location: exchangeLocation.trim() || 'Central Library Ground Floor',
         images: [
           {
             image_url: finalImg,
@@ -283,21 +286,58 @@ export default function SellPage() {
           </div>
 
           {/* College Campus */}
-          <div>
-            <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-2">
-              Exchange Location / Campus *
-            </label>
-            <select
-              value={collegeId}
-              onChange={(e) => setCollegeId(e.target.value)}
-              className="w-full text-sm bg-gray-50 border border-gray-300 rounded-xl p-3"
-            >
-              {colleges.map((col) => (
-                <option key={col.id} value={col.id}>
-                  {col.name} ({col.short_name})
-                </option>
-              ))}
-            </select>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-2">
+                College Campus *
+              </label>
+              <select
+                value={collegeId}
+                onChange={(e) => setCollegeId(e.target.value)}
+                className="w-full text-sm bg-gray-50 border border-gray-300 rounded-xl p-3"
+              >
+                {colleges.map((col) => (
+                  <option key={col.id} value={col.id}>
+                    {col.name} ({col.short_name})
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-gray-800 uppercase tracking-wider mb-2">
+                Campus Exchange Spot (Handover Location) *
+              </label>
+              <input
+                type="text"
+                required
+                value={exchangeLocation}
+                onChange={(e) => setExchangeLocation(e.target.value)}
+                placeholder="e.g. Central Library Ground Floor, Student Canteen"
+                className="w-full text-sm bg-gray-50 border border-gray-300 rounded-xl p-3"
+              />
+            </div>
+          </div>
+
+          {/* Quick suggestions for exchange location */}
+          <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
+            <span className="text-xs text-gray-400">Common spots:</span>
+            {[
+              'Central Library Ground Floor',
+              'Main Canteen / Food Court',
+              'Hostel Gate / Reception',
+              'Student Activity Center (SAC)',
+              'Main Academic Building (MAB)',
+            ].map((spot) => (
+              <button
+                key={spot}
+                type="button"
+                onClick={() => setExchangeLocation(spot)}
+                className="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-md transition-colors"
+              >
+                {spot}
+              </button>
+            ))}
           </div>
 
           {/* Image URL */}
@@ -397,6 +437,12 @@ export default function SellPage() {
                 <p className="text-[10px] text-gray-400 font-semibold uppercase">
                   {selectedCatObj?.name || 'Category'} • {selectedColObj?.short_name || 'Campus'}
                 </p>
+                {exchangeLocation && (
+                  <p className="text-[11px] text-emerald-700 font-medium flex items-center gap-1">
+                    <MapPin className="w-3 h-3 text-emerald-600 shrink-0" />
+                    <span className="truncate">{exchangeLocation}</span>
+                  </p>
+                )}
                 <h4 className="text-sm font-bold text-gray-900 line-clamp-2">
                   {title || 'Listing Title'}
                 </h4>
